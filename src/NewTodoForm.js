@@ -18,7 +18,7 @@ export default class NewTodoForm extends Component {
     this.props.createTodo({...this.state, id: uuid()})
     this.setState({task: ""})
   }
-  render() {
+  render() { 
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
