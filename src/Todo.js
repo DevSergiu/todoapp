@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import "./Todo.css"
 
 export default class Todo extends Component {
   constructor(props){
@@ -28,7 +29,7 @@ export default class Todo extends Component {
       [evt.target.name]: evt.target.value
     })
   }
-
+  
   render() {
     let result;
     if(this.state.isEditing){
@@ -46,7 +47,7 @@ export default class Todo extends Component {
           <button onClick={this.toggleForm}>Edit</button>
           <button onClick={this.handleRemove}>X</button>
 
-          <li>{this.props.task}</li>
+          <li className={this.props.completed ? 'completed' : ""}>{this.props.task}</li>
         </div>
       )
     }
